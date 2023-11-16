@@ -2,6 +2,7 @@
 import Sidebar from '@/ui/dashboard/sidebar/Sidebar'
 import styles from '../../ui/dashboard/dashboard.module.css'
 import Navbar from '@/ui/dashboard/navbar/Navbar'
+import Footer from '../../../public/nextadmin-completed/app/ui/dashboard/footer/footer'
 const Layout=({children})=>{
     return(
 <div className={styles.container}>
@@ -11,6 +12,7 @@ const Layout=({children})=>{
     <div className={styles.content}>
         <Navbar/>
         {children}
+        <Footer/>
 </div>
 </div>
 
