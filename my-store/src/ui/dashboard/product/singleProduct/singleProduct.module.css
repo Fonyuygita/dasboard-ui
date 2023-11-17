@@ -1,0 +1,134 @@
+.container {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+  }
+  
+  .infoContainer {
+    flex: 1;
+    background-color: var(--bgSoft);
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    font-weight: bold;
+    color: var(--textSoft);
+    height: max-content;
+  }
+  
+  .imgContainer{
+    /* width: 100%;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px; */
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+
+  }
+
+  .pDetails {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style the image */
+  .imgContainer img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Add the hover effect */
+  .imgContainer:hover img {
+    transform: rotate(360deg);
+  }
+  
+  /* Style the product details */
+  .pTitle {
+    text-align: center;
+  }
+
+  .pTitle span{
+    color: #888;
+  }
+  
+  .Pdescription {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .price {
+    margin-top: 20px;
+    font-weight: bold;
+    background-color:brown;
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  /* Add animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateY(50px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply animations to the elements */
+  .pTitle,
+  .Pdescription,
+  .price {
+    animation: fadeIn 1s ease, slideIn 0.5s ease;
+  }
+  
+  
+  .formContainer {
+    flex: 3;
+    background-color: var(--bgSoft);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form input, .form textarea, .form select{
+    padding: 20px;
+    border: 2px solid #2e374a;
+    border-radius: 5px;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 10px 0px;
+  }
+  
+  .form label{
+    font-size: 12px;
+  }
+  
+  .form button{
+    width: 100%;
+    padding: 20px;
+    background-color: teal;
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }

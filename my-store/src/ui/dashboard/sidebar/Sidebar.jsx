@@ -7,7 +7,7 @@ const Sidebar=()=>{
     return(
         <div className={styles.container}>
             <div className={styles.user}>
-                <Image src="" alt="user-image" width={50} height={50}/>
+                <Image src="/fonyuygita.png" alt="user-image" width={50} height={50} className={styles.profileImg}/>
                 <div className={styles.userDetails}>
                     <span className={styles.username}>Jude fonyuy</span>
                     <span className={styles.userTitle}>Coordinator</span>

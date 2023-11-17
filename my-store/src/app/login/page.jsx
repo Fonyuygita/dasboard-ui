@@ -1,10 +1,13 @@
+import styles from "../../ui/login/login.module.css"
+import LoginForm from "../../../public/nextadmin-completed/app/ui/login/loginForm/loginForm";
 
-const LoginPage=()=>{
-    return(
-        <div className="">
-            <h1>Welcome to dashboard page</h1>
-        </div>
-    )
-}
 
-export default LoginPage
+const LoginPage = () => {
+  return (
+    <div className={styles.container}>
+      <LoginForm/>
+    </div>
+  );
+};
+
+export default LoginPage;

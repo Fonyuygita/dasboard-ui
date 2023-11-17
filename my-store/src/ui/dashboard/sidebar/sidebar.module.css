@@ -9,6 +9,9 @@
     gap: 20px;
     margin-bottom: 20px;
   }
+  .profileImg{
+    border-radius: 50%;
+  }
   
   .userImage{
     border-radius: 50%;
