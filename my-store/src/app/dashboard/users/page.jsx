@@ -3,11 +3,15 @@ import styles from "../../../ui/dashboard/user/user.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import Search from "../../../../public/nextadmin-completed/app/ui/dashboard/search/search";
+import { fetchUser } from "@/app/lib/data";
 
-const UsersPage =  () => {
+const UsersPage =  async() => {
 //   const q = searchParams?.q || "";
 //   const page = searchParams?.page || 1;
 //   const { count, users } = await fetchUsers(q, page);
+
+const users=await fetchUser();
+console.log(users)
 
   return (
     <div className={styles.container}>
