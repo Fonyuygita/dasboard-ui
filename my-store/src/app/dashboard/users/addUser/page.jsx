@@ -1,9 +1,10 @@
+import { addNewUser } from "@/app/lib/serverActions"
 import styles from "../../../../ui/dashboard/user/add/add.module.css"
 
 const AddUsers=()=>{
     return(
         <div className={styles.container}>
-            <form action="" className={styles.form}>
+            <form action={addNewUser} className={styles.form}>
                 <input type="text" placeholder="username." name="username" required />
                 <input type="email" placeholder="email." name="email" required />
                 <input type="password" placeholder="Password." name="password" required />

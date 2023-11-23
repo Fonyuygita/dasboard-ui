@@ -3,16 +3,27 @@ import mongoose from "mongoose";
 // create user schema
 
 const userSchema=new mongoose.Schema({
-    usernama:{
+    username:{
         type:String,
         required:true,
         unique:true,
         min:3,
-        max:3
+        max:23
+    },
+
+    email:{
+type:String,
+required:true,
+unique:true,
+
     },
     password:{
         type:String,
         required:true,
+    },
+
+    img:{
+        type:String
     },
 
     isAdmin:{
@@ -20,9 +31,7 @@ const userSchema=new mongoose.Schema({
         default:false,
     },
 
-    img:{
-        type:String
-    },
+   
 
     isActive:{
         type:Boolean,

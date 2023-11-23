@@ -4,13 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Search from "../../../../public/nextadmin-completed/app/ui/dashboard/search/search";
 import { fetchUser } from "@/app/lib/data";
+import Pagination from "@/ui/dashboard/pagination/pagination";
 
-const UsersPage =  async() => {
-//   const q = searchParams?.q || "";
-//   const page = searchParams?.page || 1;
-//   const { count, users } = await fetchUsers(q, page);
+const UsersPage =  async({searchParams}) => {
+  // searchParams is optional and can be empty
+  const q = searchParams?.q || "";
+  const page = searchParams?.page || 1;
+  const {count, users} = await fetchUser(q, page);
 
-const users=await fetchUser();
+
 console.log(users)
 
   return (
@@ -33,21 +35,23 @@ console.log(users)
           </tr>
         </thead>
         <tbody>
-         
-            <tr>
+         {users.map((user)=>(
+
+        
+            <tr key={user.id}>
               <td>
                 <div className={styles.user}>
                   <Image
-                    src="/slider1.png"
-                    alt=""
+                    src={user.img || "/me.png"}
+                    alt={user.img}
                     width={40}
                     height={40}
                     className={styles.userImage}
                   />
-                  jude fonyuy
+                  {user.eusernama}
                 </div>
               </td>
-              <td>jude@email.com</td>
+              <td>{user.email}</td>
               <td>12/23/23</td>
               <td>Admin</td>
               <td>Active</td>
@@ -67,10 +71,11 @@ console.log(users)
                 </div>
               </td>
             </tr>
+        ))}
        
         </tbody>
       </table>
-
+<Pagination numberCount={count}/>
     </div>
   );
 };
